@@ -14,9 +14,6 @@ public class UUIDUtils {
 
 	public static void main(String[] args) {
 
-		System.out.println("sdafsdfsdsdsadasdasdyyrsdfsdfr");
-        System.out.println("sdafsdfsdsdasdyyrr2hww");
-		System.out.println("sdafsdfsdsdasd2hwwyyrr");
 		System.out.println(getId());
 	}
 }
