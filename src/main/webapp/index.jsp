@@ -18,7 +18,8 @@
         }
     }</script>
     <script src="/static/login/js/jquery.min.js"></script>
-    <script>$(document).ready(function (c) {
+    <script>
+        $(document).ready(function (c) {
         $('.alert-close').on('click', function (c) {
             $('.message').fadeOut('slow', function (c) {
                 $('.message').remove();
@@ -50,7 +51,7 @@
             </li>
             <div class="clear"></div>
             <div class="submit">
-                <input type="submit" value="Sign in" id="login" ">
+                <input type="submit" value="Sign in" id="login">
                 <h4><a href="#">Lost your Password ?</a></h4>
                 <div class="clear"></div>
             </div>
