@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyr.modules.user.dao.UserDao">
+   <resultMap id="userColumn" type="com.yyr.modules.user.entity.User">
+   <result property="id" column="id"></result>
+       <result property="passWord" column="password"></result>
+       <result property="userName" column="user_name"></result>
+       <result property="type" column="type"></result>
+       <result property="email" column="email"></result>
+       <result property="image" column="image"></result>
+       <result property="sex" column="sex"></result>
+       <result property="status" column="status"></result>
+   </resultMap>
+
+
+    <!-- public User getUser(User user); -->
+    <select id="getUser" resultMap="userColumn">
+       select id,password,user_name ,type,email,image,sex,status from tbl_user
+       where user_name=#{userName} and password=#{passWord};
+
+    </select>
+
+</mapper>
