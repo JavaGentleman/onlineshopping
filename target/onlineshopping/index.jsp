@@ -1,70 +1,47 @@
-<!DOCTYPE HTML>
-<html>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="/include/header.jsp" %>
 <head>
-    <title>login</title>
-    <link href="/static/login/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <!-- -->
-    <script>var __links = document.querySelectorAll('a');
-
-    function __linkClick(e) {
-        parent.window.postMessage(this.href, '*');
-    };
-    for (var i = 0, l = __links.length; i < l; i++) {
-        if (__links[i].getAttribute('data-t') == '_blank') {
-            __links[i].addEventListener('click', __linkClick, false);
-        }
-    }</script>
-    <script src="/static/login/js/jquery.min.js"></script>
-    <script>
-        $(document).ready(function (c) {
-        $('.alert-close').on('click', function (c) {
-            $('.message').fadeOut('slow', function (c) {
-                $('.message').remove();
-            });
-        });
-    });
-
-
-    </script>
+    <script src="${pageContext.request.contextPath}/res/js/admin/admin_login.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/admin/admin_login.css"/>
+    <title>Tmall 管理后台 - 登录</title>
 </head>
 <body>
-<!-- contact-form -->
-<div class="message warning">
-    <div class="inset">
-        <div class="login-head">
-            <h1>Login Form</h1>
-            <div class="alert-close"></div>
+<div id="div_background">
+    <div id="div_nav">
+        <span id="txt_date"></span>
+        <span id="txt_peel">换肤</span>
+        <ul id="div_peelPanel">
+            <li value="url(${pageContext.request.contextPath}/res/images/admin/loginPage/background-1.jpg)">
+                <img src="${pageContext.request.contextPath}/res/images/admin/loginPage/background-mini-1.jpg"/>
+            </li>
+            <li value="url(${pageContext.request.contextPath}/res/images/admin/loginPage/background-2.jpg)">
+                <img src="${pageContext.request.contextPath}/res/images/admin/loginPage/background-mini-2.jpg"/>
+            </li>
+            <li value="url(${pageContext.request.contextPath}/res/images/admin/loginPage/background-3.jpg)">
+                <img src="${pageContext.request.contextPath}/res/images/admin/loginPage/background-mini-3.jpg"/>
+            </li>
+            <li value="url(${pageContext.request.contextPath}/res/images/admin/loginPage/background-4.jpg)">
+                <img src="${pageContext.request.contextPath}/res/images/admin/loginPage/background-mini-4.jpg"/>
+            </li>
+            <li value="url(${pageContext.request.contextPath}/res/images/admin/loginPage/background-5.jpg)">
+                <img src="${pageContext.request.contextPath}/res/images/admin/loginPage/background-mini-5.jpg"/>
+            </li>
+        </ul>
+    </div>
+    <div id="div_main">
+        <div id="div_head"><p>tmall <span>管理后台</span></p></div>
+        <div id="div_content">
+            <img id="img_profile_picture"
+                 src="${pageContext.request.contextPath}/res/images/admin/loginPage/default_profile_picture-128x128.png"
+                 alt="头像" title="头像"
+                 onerror="this.src='${pageContext.request.contextPath}/res/images/admin/loginPage/default_profile_picture-128x128.png'"/>
+            <form id="form_login">
+                <input type="text" class="form-control form_control" placeholder="用户名" id="input_username" title="请输入用户名"/>
+                <input type="password" class="form-control form_control" placeholder="密码" id="input_password" title="请输入密码" autocomplete="on">
+                <span id="txt_error_msg"></span>
+                <input type="button" class="btn btn-danger" id="btn_login" value="登录"/>
+            </form>
         </div>
-        <form>
-            <li>
-                <input type="text" class="text" value="username" name="userName" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Username';}">
-                <a href="#" class=" icon user"></a>
-            </li>
-            <div class="clear"></div>
-            <li>
-                <input type="password" value="Password" name="passWord" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Password';}"> <a href="#" class="icon lock"></a>
-            </li>
-            <div class="clear"></div>
-            <div class="submit">
-                <input type="submit" value="Sign in" id="login">
-                <h4><a href="#">Lost your Password ?</a></h4>
-                <div class="clear"></div>
-            </div>
-
-        </form>
     </div>
 </div>
-</div>
-<div class="clear"></div>
-<!--- footer --->
-<div class="footer">
-    <p>Copyright &copy; 2014.</p>
-</div>
-
 </body>
-</html>
